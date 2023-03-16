@@ -1,6 +1,5 @@
 currTime = document.getElementById('appt').value;
 currDate = document.getElementById('date').value;
-localStorage.clear();
 
 
 function saveReservation(date, table, from, to) {
@@ -24,7 +23,7 @@ function saveReservation(date, table, from, to) {
         bool = true; return;
     };
 
-    if (from < 540 || to > 1200) {
+    if (from < 540 || to > 1320) {
         alert('Please slect a slot within open hours');
         bool = true; return;
     }
