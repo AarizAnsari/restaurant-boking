@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dine Out</title>
+</head>
+<style>
+    input,select{
+        float: right;
+    }
+    #incont,#res{
+        width: 40%;
+        margin: auto;
+        padding: 50px;
+        background-color: black;
+        border-radius: 25px;
+        color: white;
+        box-shadow: 10px 10px 5px rgb(92, 92, 92);
+    }
+    .field{
+        margin: 20px;
+    }
+    body{
+        background-color: rgb(197, 197, 197);
+    }
+    #spacer{
+        height: 50px;
+    }
+</style>
+<body>
+    <div id="incont">
+        <div class="field">
+            <label for="date">Date:</label>
+            <input type="date" id="date" value="">
+        </div>
+        <div class="field">
+            Seating:
+            <select title="Tables" id="Tables">
+                <option selected disabled value="0">Seating</option>
+                <option value="1">1 Person</option>
+                <option value="2">2 People</option>
+                <option value="3">4 People</option>
+                <option value="4">6 People</option>
+            </select>
+        </div>
+        <div>
+            <div class="field">
+                <label for="appt">From:</label>
+            <input type="time" id="appt" name="appt" min="09:00" max="18:00" required>
+            </div>
+            <div class="field">
+            <label for="to">To:</label>
+            <input type="time" id="to" min="09:00" max="18:00" required>
+            </div>
+            <small  class="field">Restaurent Timing is 9 AM to 10 PM</small>
+        </div>
+    
+        <div class="field">
+            <button onclick="getReservation()">Reserve</button>
+        </div>
+    </div>
+    <div id="spacer">
+
+    </div>
+    <div id="res" style="visibility: hidden;">
+        <h3>See Bookings</h3>
+        <div id="div1"></div>
+    </div>
+    <script src="setDefault.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
